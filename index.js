@@ -87,3 +87,26 @@ studentList.map((element) => {
 
 o_cont.innerHTML=o_html;
 
+//********************************** */
+
+function FunnyPerson(name, studentId){
+    this.name=name;
+    this.studentId=studentId
+    };   
+
+var newStudentList = [
+    new FunnyPerson('Johnny', 101),
+    new FunnyPerson('Ricky', 102),
+    new FunnyPerson('Mick', 103)
+]
+
+var o_cont2 = document.createElement('div');
+o_cont2.classList.add('funny');
+document.querySelector('#display').appendChild(o_cont2);
+var o_html2='';
+newStudentList.map((element) => {
+    o_html2 += `<div> ${element.name}</div>`;
+    o_html2 += `<div> ${element.studentId}</div>`;
+});
+
+o_cont2.innerHTML=o_html2;

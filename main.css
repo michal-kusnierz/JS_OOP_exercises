@@ -14,3 +14,9 @@ h1{
     border:1px solid brown;
     background: lightgrey;
 }
+.funny{
+    display: flex;
+    padding: 20px;
+    border: 1px solid red;
+    background: lightsalmon;
+}
