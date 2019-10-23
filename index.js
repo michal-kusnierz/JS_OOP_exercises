@@ -133,3 +133,12 @@ function Student(name, id) {
 
 Student.prototype = Object.create(FunnyPerson.prototype);
 Student.prototype.constructor = student;
+
+function Teacher(name, studentId) {
+    FunnyPerson.call(this, name, studentId);
+    this.role = 'teacher';
+  }
+
+Teacher.prototype = Object.create(FunnyPerson.prototype);
+Teacher.prototype.constructor = teacher;
+
