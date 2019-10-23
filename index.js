@@ -83,4 +83,15 @@ studentList.push(student8);
 studentList.push(student9);
 studentList.push(student10);
 
+// implement into HTML
+
+var o_cont=document.querySelector('#display');  // 'o_cont = output_container'
+var o_html='';
+studentList.map((element) => {
+    o_html += `<div> ${element.name}</div>`;
+    o_html += `<div> ${element.address}</div>`;
+    o_html += `<div> ${element.studentId}</div>`;
+});
+
+o_cont.innerHTML=o_html;
 
