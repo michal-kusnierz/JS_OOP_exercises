@@ -50,3 +50,12 @@ var Person ={
     }
 };
 
+var student1 = Object.create(Person);
+student1.setData('Adam', 'Gdynia', 1);
+studentList.push(student1);
+
+var student2 = Object.create(Person);
+student2.setData('Monika', 'Gdansk', 2);
+studentList.push(student2);
+
+
