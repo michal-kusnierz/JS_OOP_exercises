@@ -8,9 +8,13 @@ var Object1 = {
     studentId: 1,
     profile:'student',
     displayFullInfo: function(){
-        console.log(this.name, this.address, this.studentId, this.profile);       //first try
+        // console.log(this.name, this.address, this.studentId, this.profile);       //first try
+        // console.log('Imię: ' + this.name + ' Adres: ' + this.address + ' id: ' + this.studentId + ' profil: ' + this.profile)    //drzewiej... :);
+        console.log(`Imię: ${this.name} Adres: ${this.address} Id: ${this.studentId} profil: ${this.profile}`);
     },
-    changeId: function(){console.log(this.studentId=11);
+    // changeId: function(){console.log(this.studentId=11);}
+    changeId: function(newId) {
+        this.studentId = newId;
     }
 };
 
@@ -20,8 +24,9 @@ var Object2 = {
     studentId: 2,
     profile:'student',
     displayFullInfo: function(){
-        console.log(this.name, this.address, this.studentId, this.profile);
+        console.log(`Imię: ${this.name} Adres: ${this.address} Id: ${this.studentId} profil: ${this.profile}`);
     },
-    changeId: function(){console.log(this.studentId=11);
+    changeId: function(newId){
+        this.studentId = newId;
     }
 };
