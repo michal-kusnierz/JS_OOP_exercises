@@ -62,6 +62,10 @@ function Person(name, address, studentId) {
         this.studentId=newId;
         }   
     }
+// Person.prototype.displayInfo = function() {
+//         console.log('Student ' + this.name);
+//       }
+    
     var studentList = [
         new Person('Adam', 'Gdynia', 1),
         new Person('Monika', 'Gdansk', 2),
@@ -93,13 +97,17 @@ function FunnyPerson(name, studentId){
     this.name=name;
     this.studentId=studentId
     };   
-
+    
 var newStudentList = [
     new FunnyPerson('Johnny', 101),
     new FunnyPerson('Ricky', 102),
     new FunnyPerson('Mick', 103)
 ]
-
+ 
+FunnyPerson.prototype.displayInfo = function(){
+console.log('Student ' + this.name);
+}
+    
 var o_cont2 = document.createElement('div');
 o_cont2.classList.add('funny');
 document.querySelector('#display').appendChild(o_cont2);
@@ -110,3 +118,15 @@ newStudentList.map((element) => {
 });
 
 o_cont2.innerHTML=o_html2;
+
+//**********************Protytype */
+
+//********the right way to declare new method:
+// funnyPerson.prototype.displayInfo = function() {
+//     console.log('Student ' + this.name);
+//   }
+
+function Student(name, id) {
+  FunnyPerson.call(this, name, id);
+  this.role = 'student';
+}
