@@ -58,4 +58,29 @@ var student2 = Object.create(Person);
 student2.setData('Monika', 'Gdansk', 2);
 studentList.push(student2);
 
+var student3 = Object.create(Person);
+student3.setData('Eustachy', 'Nowy Targ',3);
+var student4 = Object.create(Person);
+student4.setData('Dionizy','Olsztyn',4);
+var student5 = Object.create(Person);
+student5.setData('Pelagia', 'Gdansk', 5);
+var student6 = Object.create(Person);
+student6.setData('Innocenty', 'Gdansk', 6);
+var student7 = Object.create(Person);
+student7.setData('Maria', 'Gdansk', 7);
+var student8 = Object.create(Person);
+student8.setData('Anna', 'Gdansk', 8);
+var student9 = Object.create(Person);
+student9.setData('Jakub', 'Gdansk', 9);
+var student10 = Object.create(Person);
+student10.setData('Maciej', 'Gdansk', 10);
+studentList.push(student3);
+studentList.push(student4);
+studentList.push(student5);
+studentList.push(student6);
+studentList.push(student7);
+studentList.push(student8);
+studentList.push(student9);
+studentList.push(student10);
+
 
