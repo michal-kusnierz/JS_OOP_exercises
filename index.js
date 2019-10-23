@@ -30,3 +30,23 @@ var Object2 = {
         this.studentId = newId;
     }
 };
+
+//issue#2 //*********// Object.create() //************/
+
+var studentList = [];
+
+var Person ={
+    name: '',
+    // setName: function(name){this.name=name}, 
+    address: '',
+    studentId:'',
+    setData: function(name, address, studentId){
+        this.name = name,
+        this.address = address,
+        this.studentId = studentId
+    },
+    displayPerson: function(){
+        console.log(setData)
+    }
+};
+
