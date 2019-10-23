@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+h1{
+    margin: 20px;
+    background: lightseagreen;
+    padding:10px;
+    width: 400px;
+}
+#display{
+    display: block;
+    background: lightgrey;
+}
