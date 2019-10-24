@@ -137,6 +137,8 @@ newStudentList.map((element) => {
     o_html2 += `<div> ${element.name}</div>`;
     o_html2 += `<div> ${element.address}</div>`;
     o_html2 += `<div> ${element.studentId}</div>`;
+    o_html2 += `<div> ${element.role}</div>`;
+
 });
 
 o_cont2.innerHTML=o_html2;
