@@ -104,6 +104,12 @@ FunnyPerson.prototype.displayInfo = function(){
 console.log(`Student ${this.name}`);
 };
 
+
+function Student(name, address, studentId) {
+    FunnyPerson.call(this, name, studentId);
+    this.role = 'student';
+};
+  
 var newStudentList = [
     new FunnyPerson('Johnny', 101),
     new FunnyPerson('Ricky', 102),
@@ -127,11 +133,6 @@ o_cont2.innerHTML=o_html2;
 // funnyPerson.prototype.displayInfo = function() {
 //     console.log('Student ' + this.name);
 //   }
-
-function Student(name, id) {
-  FunnyPerson.call(this, name, id);
-  this.role = 'student';
-}
 
 Student.prototype = Object.create(FunnyPerson.prototype);
 Student.prototype.constructor = student;
