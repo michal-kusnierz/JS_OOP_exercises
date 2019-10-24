@@ -93,20 +93,22 @@ o_cont.innerHTML=o_html;
 
 //********************************** */
 
-function FunnyPerson(name, studentId){
+function FunnyPerson(name, address, studentId){      //name starting with Capital letter
     this.name=name;
-    this.studentId=studentId
+    this.address = address;
+    this.studentId=studentId;
     };   
     
+//adding a method using prototype: 
+FunnyPerson.prototype.displayInfo = function(){
+console.log(`Student ${this.name}`);
+};
+
 var newStudentList = [
     new FunnyPerson('Johnny', 101),
     new FunnyPerson('Ricky', 102),
     new FunnyPerson('Mick', 103)
 ]
- 
-FunnyPerson.prototype.displayInfo = function(){
-console.log('Student ' + this.name);
-}
     
 var o_cont2 = document.createElement('div');
 o_cont2.classList.add('funny');
