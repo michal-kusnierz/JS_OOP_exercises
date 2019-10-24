@@ -124,9 +124,9 @@ Teacher.prototype.constructor = Teacher;
 
   
 var newStudentList = [
-    new FunnyPerson('Johnny', 101),
-    new FunnyPerson('Ricky', 102),
-    new FunnyPerson('Mick', 103)
+    new Student('Johnny', 'Gdansk', 101),
+    new Student('Ricky', 'Gdansk', 102),
+    new Student('Mick', 'Gdansk', 103)
 ]
     
 var o_cont2 = document.createElement('div');
@@ -135,15 +135,17 @@ document.querySelector('#display').appendChild(o_cont2);
 var o_html2='';
 newStudentList.map((element) => {
     o_html2 += `<div> ${element.name}</div>`;
+    o_html2 += `<div> ${element.address}</div>`;
     o_html2 += `<div> ${element.studentId}</div>`;
 });
 
 o_cont2.innerHTML=o_html2;
 
+
 //**********************Protytype */
 
 //********the right way to declare new method:
-// funnyPerson.prototype.displayInfo = function() {
-//     console.log('Student ' + this.name);
+// FunnyPerson.prototype.displayInfo = function() {
+    // console.log(`Student + ${this.name}`);
 //   }
 
