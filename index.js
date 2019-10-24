@@ -115,6 +115,13 @@ function Teacher(name, address, studentId) {
     this.role = 'teacher';
 };
 
+Student.prototype = Object.create(FunnyPerson.prototype);
+Student.prototype.constructor = Student;
+
+Teacher.prototype = Object.create(FunnyPerson.prototype);
+Teacher.prototype.constructor = Teacher;
+
+
   
 var newStudentList = [
     new FunnyPerson('Johnny', 101),
@@ -139,11 +146,4 @@ o_cont2.innerHTML=o_html2;
 // funnyPerson.prototype.displayInfo = function() {
 //     console.log('Student ' + this.name);
 //   }
-
-Student.prototype = Object.create(FunnyPerson.prototype);
-Student.prototype.constructor = student;
-
-
-Teacher.prototype = Object.create(FunnyPerson.prototype);
-Teacher.prototype.constructor = teacher;
 
