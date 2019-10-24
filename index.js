@@ -126,7 +126,9 @@ Teacher.prototype.constructor = Teacher;
 var newStudentList = [
     new Student('Johnny', 'Gdansk', 101),
     new Student('Ricky', 'Gdansk', 102),
-    new Student('Mick', 'Gdansk', 103)
+    new Student('Mick', 'Gdansk', 103),
+    new Teacher('Roland', 'Londyn',1001),
+    new Teacher('Borys', 'Moskwa',1002)    
 ]
     
 var o_cont2 = document.createElement('div');
