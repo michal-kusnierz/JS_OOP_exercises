@@ -47,3 +47,18 @@ const Array =[
 new Account('Adam', 10222233334444555566667777),
 new Account('Beata', 11222233334444555566667777)
 ]
+
+///*******************  Kaj's example */
+
+class Person{
+    constructor(fullName, accountNumber){
+        this._fullName = fullName;
+        this._accountNo = accountNo;
+    }
+}
+
+const peopleList =[
+    new Person('Kaj Białas', '87114020040000123456789012'),
+    new Person('Jan Nowak', '87114020040000123456789013'),
+    new Person('Adam Małysz', '87114020040000123456789014')    
+]
