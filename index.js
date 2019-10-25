@@ -76,10 +76,10 @@ class Person{
 
 class Render {
     static renderList(listToRender, elementToRender){
-     document.getElementById(elementToRender);
+     const element = document.getElementById(elementToRender);
      
      listToRender.map((currentElement) => {
-         
+         console.log(currentElement);
      })
     }
 }
