@@ -90,3 +90,5 @@ const peopleList =[
     new Person('Jan Nowak', '87114020040000123456789013'),
     new Person('Adam Małysz', '87114020040000123456789014')    
 ]
+
+Render.renderList(peopleList, 'list');
