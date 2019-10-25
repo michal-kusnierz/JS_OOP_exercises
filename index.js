@@ -9,10 +9,18 @@ class Account {
     get name (){
         return this._name;
     }
+    get accountNo (){
+        return this.accountNo;
+    }
 
-    set name(){
+    set name(newName){
         this._name = newName;
     }
+
+    set accountNo(newAccountNo){
+        this._accountNo = newAccountNo;
+    }
+
 }
 
 const Array =[
