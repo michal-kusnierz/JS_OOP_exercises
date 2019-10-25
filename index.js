@@ -64,14 +64,21 @@ class Person{
             ' **** **** **** **** **** '
         );
     };
-    
+
     set accountNumber(newParam) {
         this._accountNumber = newParam;
     }
 }
 
-console.leg(peopleList[0].accountNumber)
-// w console: peopleList[0].fullName
+// console.leg(peopleList[0].accountNumber)
+// // w console: peopleList[0].fullName
+
+
+class Render {
+    static renderList(listToRender, elementToRender){
+        
+    }
+}
 
 const peopleList =[
 
