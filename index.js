@@ -70,8 +70,8 @@ class Person{
     }
 }
 
-// console.leg(peopleList[0].accountNumber)
-// // w console: peopleList[0].fullName
+// console.log(peopleList[0].accountNumber)
+// into console: peopleList[0].fullName
 
 
 class Render {
@@ -79,13 +79,13 @@ class Render {
      const element = document.getElementById(elementToRender);
      
      listToRender.map((currentElement) => {
-         console.log(currentElement);
+        element.innerHTML += 
+        `<div>Imię i nazwisko: ${currentElement.fullName} || Numer konta: ${currentElement.accountNumber}</div>`
      })
     }
 }
 
 const peopleList =[
-
     new Person('Kaj Białas', '87114020040000123456789012'),
     new Person('Jan Nowak', '87114020040000123456789013'),
     new Person('Adam Małysz', '87114020040000123456789014')    
