@@ -76,7 +76,11 @@ class Person{
 
 class Render {
     static renderList(listToRender, elementToRender){
-        
+     document.getElementById(elementToRender);
+     
+     listToRender.map((currentElement) => {
+         
+     })
     }
 }
 
