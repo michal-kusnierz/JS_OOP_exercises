@@ -53,11 +53,21 @@ new Account('Beata', 11222233334444555566667777)
 class Person{
     constructor(fullName, accountNumber){
         this._fullName = fullName;
-        this._accountNo = accountNo;
+        this._accountNumber = accountNumber;
     }
+    get fullName(){
+        return this._fullName;
+    }
+    get accountNo(){
+        return this._accountNumber.slice(2,22);
+    }
+    
 }
 
+// w console: peopleList[0].fullName
+
 const peopleList =[
+
     new Person('Kaj Białas', '87114020040000123456789012'),
     new Person('Jan Nowak', '87114020040000123456789013'),
     new Person('Adam Małysz', '87114020040000123456789014')    
