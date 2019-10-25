@@ -10,7 +10,12 @@ class Gamer{
     right(){     
         this.x +=1
         }
-    
+    up(){
+        this.y -=1
+    }
+    down(){
+        this.y +=1
+    }
 }
 const ludzikJS = new Gamer(350,300);
 
@@ -22,6 +27,8 @@ class Move {
      
      x.style.left = ludzikJS.x +'px';
      x.style.right = ludzikJS.x +'px';
+     y.style.top = ludzikJS.y +'px';
+     
     }
 
     static KeySupport(ludzikJS, event){
@@ -33,6 +40,15 @@ class Move {
         (event.key === 'ArrowRight'){
             ludzikJS.right();
             Move.RenderLudzik(ludzikJS);
+        }else if
+            (event.key === 'ArrowDown'){
+            ludzikJS.down();
+            Move.RenderLudzik(ludzikJS);
+        }else if
+        (event.key === 'ArrowUp'){
+        ludzikJS.up();
+        Move.RenderLudzik(ludzikJS);
+ 
         }
         /*
         1. switch
