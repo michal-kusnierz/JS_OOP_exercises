@@ -31,17 +31,17 @@ class Account {
 // 2. sposób:
 // funkcją slice
 
-const x = '10111011101110111011101110'
+// const x = '10111011101110111011101110'
 
-protect_accountNo = function (x) {
-    var part1, hidden, part2;
-    part1 = x.slice(0,2)
-    hidden = x.slice(2,22);
-    part2 = x.slice(22,25)
-    return part1 + '**** **** **** **** ****' + part2;
-};
+// protect_accountNo = function (x) {
+//     var part1, hidden, part2;
+//     part1 = x.slice(0,2)
+//     hidden = x.slice(2,22);
+//     part2 = x.slice(22,25)
+//     return part1 + '**** **** **** **** ****' + part2;
+// };
 
-console.log(protect_accountNo(x));
+// console.log(protect_accountNo(x));
 
 const Array =[
 new Account('Adam', 10222233334444555566667777),
@@ -58,12 +58,19 @@ class Person{
     get fullName(){
         return this._fullName;
     }
-    get accountNo(){
-        return this._accountNumber.slice(2,22);
-    }
+    get accountNumber(){
+        return this._accountNumber.replace(
+            this._accountNumber.slice(2,22),
+            ' **** **** **** **** **** '
+        );
+    };
     
+    set accountNumber(newParam) {
+        this._accountNumber = newParam;
+    }
 }
 
+console.leg(peopleList[0].accountNumber)
 // w console: peopleList[0].fullName
 
 const peopleList =[
