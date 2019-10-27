@@ -10,7 +10,6 @@ class Gamer{
       return this._y;
     }
     
-// take 2: move to second direction 
     left(){     
         this._x -=10
     }
@@ -39,24 +38,42 @@ class Move {
     }
 
     static KeySupport(BirdJS, event){
-     
-        if (event.key === 'ArrowLeft'){
-            BirdJS.left();
-            Move.RenderBird(BirdJS);
-        }else if
-        (event.key === 'ArrowRight'){
-            BirdJS.right();
-            Move.RenderBird(BirdJS);
-        }else if
-            (event.key === 'ArrowDown'){
-            BirdJS.down();
-            Move.RenderBird(BirdJS);
-        }else if
-        (event.key === 'ArrowUp'){
-        BirdJS.up();
-        Move.RenderBird(BirdJS);
+      switch(event.code){
+        case 'ArrowLeft':
+          BirdJS.left();
+          Move.RenderBird(BirdJS);
+          break;
+        case 'ArrowRight':
+          BirdJS.right();
+          Move.RenderBird(BirdJS);
+          break;
+        case 'ArrowUp':
+          BirdJS.up();
+          Move.RenderBird(BirdJS);
+          break;
+        case 'ArrowDown':
+          BirdJS.down();
+          Move.RenderBird(BirdJS);
+          break;
+      }
+     //changed to switch method
+        // if (event.key === 'ArrowLeft'){
+        //     BirdJS.left();
+        //     Move.RenderBird(BirdJS);
+        // }else if
+        // (event.key === 'ArrowRight'){
+        //     BirdJS.right();
+        //     Move.RenderBird(BirdJS);
+        // }else if
+        //     (event.key === 'ArrowDown'){
+        //     BirdJS.down();
+        //     Move.RenderBird(BirdJS);
+        // }else if
+        // (event.key === 'ArrowUp'){
+        // BirdJS.up();
+        // Move.RenderBird(BirdJS);
  
-        }
+        // }
         /*
         1. switch
         2. odświeżenie funkcji Render
@@ -65,7 +82,7 @@ class Move {
     }
 
 
-Move.RenderBird(Gamer);
+Move.RenderBird(BirdJS);
 
 document.addEventListener('keydown', (event) => Move.KeySupport(BirdJS, event));
 
