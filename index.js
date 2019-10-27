@@ -1,20 +1,27 @@
 class Gamer{
     constructor(x,y){
-        this.x=x;
-        this.y=y;
+        this._x=x;
+        this._y=y;
     }
+    get x(){
+      return this._x;
+    }
+    get y(){
+      return this._y;
+    }
+    
 // take 2: move to second direction 
     left(){     
-        this.x -=10
+        this._x -=10
     }
     right(){     
-        this.x +=10
+        this._x +=10
         }
     up(){
-        this.y -=10
+        this._y -=10
     }
     down(){
-        this.y +=10
+        this._y +=10
     }
 }
 const ludzikJS = new Gamer(350,300);
