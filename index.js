@@ -5,16 +5,16 @@ class Gamer{
     }
 // take 2: move to second direction 
     left(){     
-        this.x -=1
+        this.x -=10
     }
     right(){     
-        this.x +=1
+        this.x +=10
         }
     up(){
-        this.y -=1
+        this.y -=10
     }
     down(){
-        this.y +=1
+        this.y +=10
     }
 }
 const ludzikJS = new Gamer(350,300);
