@@ -24,37 +24,37 @@ class Gamer{
         this._y +=10
     }
 }
-const ludzikJS = new Gamer(350,300);
+const BirdJS = new Gamer(350,300);
 
 class Move {           
-    static RenderLudzik(ludzikJS){
+    static RenderBird(BirdJS){
      const x = document.querySelector('.gamer');
      const y = document.querySelector('.gamer');
-     console.log(ludzikJS, y);
+     console.log(BirdJS, y);
      
-     x.style.left = ludzikJS.x +'px';
-     x.style.right = ludzikJS.x +'px';
-     y.style.top = ludzikJS.y +'px';
+     x.style.left = BirdJS.x +'px';
+     x.style.right = BirdJS.x +'px';
+     y.style.top = BirdJS.y +'px';
      
     }
 
-    static KeySupport(ludzikJS, event){
+    static KeySupport(BirdJS, event){
      
         if (event.key === 'ArrowLeft'){
-            ludzikJS.left();
-            Move.RenderLudzik(ludzikJS);
+            BirdJS.left();
+            Move.RenderBird(BirdJS);
         }else if
         (event.key === 'ArrowRight'){
-            ludzikJS.right();
-            Move.RenderLudzik(ludzikJS);
+            BirdJS.right();
+            Move.RenderBird(BirdJS);
         }else if
             (event.key === 'ArrowDown'){
-            ludzikJS.down();
-            Move.RenderLudzik(ludzikJS);
+            BirdJS.down();
+            Move.RenderBird(BirdJS);
         }else if
         (event.key === 'ArrowUp'){
-        ludzikJS.up();
-        Move.RenderLudzik(ludzikJS);
+        BirdJS.up();
+        Move.RenderBird(BirdJS);
  
         }
         /*
@@ -65,7 +65,7 @@ class Move {
     }
 
 
-Move.RenderLudzik(Gamer);
+Move.RenderBird(Gamer);
 
-document.addEventListener('keydown', (event) => Move.KeySupport(ludzikJS, event));
+document.addEventListener('keydown', (event) => Move.KeySupport(BirdJS, event));
 
